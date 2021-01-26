@@ -1,12 +1,12 @@
 name: Actions Workflow
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: List BUILD-IN VARS
+      - name: List Env Vars
         run: | 
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
